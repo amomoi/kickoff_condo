@@ -1,0 +1,67 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome_principal: MyString
+  unidade: 1
+  celular: MyString
+  email: MyString
+  cidade: MyString
+  profissao: MyString
+  zap: false
+  nome1: MyString
+  profissao1: MyString
+  parentesco: MyString
+  nome2: MyString
+  profissao2: MyString
+  parentesco2: MyString
+  nome3: MyString
+  profissao3: MyString
+  parentesco3: MyString
+  nome4: MyString
+  profissao4: MyString
+  parentesco4: MyString
+  nome5: MyString
+  profissao5: MyString
+  parentesco5: MyString
+  ano_compra: 1
+  frequencia: MyString
+  locacao: false
+  sugestao1: MyString
+  sugestao2: MyString
+  sugestao3: MyString
+  sugestao4: MyString
+  sugestao5: MyString
+  comentario: MyString
+
+two:
+  nome_principal: MyString
+  unidade: 1
+  celular: MyString
+  email: MyString
+  cidade: MyString
+  profissao: MyString
+  zap: false
+  nome1: MyString
+  profissao1: MyString
+  parentesco: MyString
+  nome2: MyString
+  profissao2: MyString
+  parentesco2: MyString
+  nome3: MyString
+  profissao3: MyString
+  parentesco3: MyString
+  nome4: MyString
+  profissao4: MyString
+  parentesco4: MyString
+  nome5: MyString
+  profissao5: MyString
+  parentesco5: MyString
+  ano_compra: 1
+  frequencia: MyString
+  locacao: false
+  sugestao1: MyString
+  sugestao2: MyString
+  sugestao3: MyString
+  sugestao4: MyString
+  sugestao5: MyString
+  comentario: MyString

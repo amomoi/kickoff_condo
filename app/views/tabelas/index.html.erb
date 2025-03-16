@@ -1,0 +1,98 @@
+<%- model_class = Tabela -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:nome_principal) %></th>
+      <th><%= model_class.human_attribute_name(:unidade) %></th>
+      <th><%= model_class.human_attribute_name(:celular) %></th>
+      <th><%= model_class.human_attribute_name(:email) %></th>
+      <th><%= model_class.human_attribute_name(:cidade) %></th>
+      <th><%= model_class.human_attribute_name(:profissao) %></th>
+      <th><%= model_class.human_attribute_name(:zap) %></th>
+      <th><%= model_class.human_attribute_name(:nome1) %></th>
+      <th><%= model_class.human_attribute_name(:profissao1) %></th>
+      <th><%= model_class.human_attribute_name(:parentesco) %></th>
+      <th><%= model_class.human_attribute_name(:nome2) %></th>
+      <th><%= model_class.human_attribute_name(:profissao2) %></th>
+      <th><%= model_class.human_attribute_name(:parentesco2) %></th>
+      <th><%= model_class.human_attribute_name(:nome3) %></th>
+      <th><%= model_class.human_attribute_name(:profissao3) %></th>
+      <th><%= model_class.human_attribute_name(:parentesco3) %></th>
+      <th><%= model_class.human_attribute_name(:nome4) %></th>
+      <th><%= model_class.human_attribute_name(:profissao4) %></th>
+      <th><%= model_class.human_attribute_name(:parentesco4) %></th>
+      <th><%= model_class.human_attribute_name(:nome5) %></th>
+      <th><%= model_class.human_attribute_name(:profissao5) %></th>
+      <th><%= model_class.human_attribute_name(:parentesco5) %></th>
+      <th><%= model_class.human_attribute_name(:ano_compra) %></th>
+      <th><%= model_class.human_attribute_name(:frequencia) %></th>
+      <th><%= model_class.human_attribute_name(:locacao) %></th>
+      <th><%= model_class.human_attribute_name(:sugestao1) %></th>
+      <th><%= model_class.human_attribute_name(:sugestao2) %></th>
+      <th><%= model_class.human_attribute_name(:sugestao3) %></th>
+      <th><%= model_class.human_attribute_name(:sugestao4) %></th>
+      <th><%= model_class.human_attribute_name(:sugestao5) %></th>
+      <th><%= model_class.human_attribute_name(:comentario) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tabelas.each do |tabela| %>
+      <tr>
+        <td><%= link_to tabela.id, tabela_path(tabela) %></td>
+        <td><%= tabela.nome_principal %></td>
+        <td><%= tabela.unidade %></td>
+        <td><%= tabela.celular %></td>
+        <td><%= tabela.email %></td>
+        <td><%= tabela.cidade %></td>
+        <td><%= tabela.profissao %></td>
+        <td><%= tabela.zap %></td>
+        <td><%= tabela.nome1 %></td>
+        <td><%= tabela.profissao1 %></td>
+        <td><%= tabela.parentesco %></td>
+        <td><%= tabela.nome2 %></td>
+        <td><%= tabela.profissao2 %></td>
+        <td><%= tabela.parentesco2 %></td>
+        <td><%= tabela.nome3 %></td>
+        <td><%= tabela.profissao3 %></td>
+        <td><%= tabela.parentesco3 %></td>
+        <td><%= tabela.nome4 %></td>
+        <td><%= tabela.profissao4 %></td>
+        <td><%= tabela.parentesco4 %></td>
+        <td><%= tabela.nome5 %></td>
+        <td><%= tabela.profissao5 %></td>
+        <td><%= tabela.parentesco5 %></td>
+        <td><%= tabela.ano_compra %></td>
+        <td><%= tabela.frequencia %></td>
+        <td><%= tabela.locacao %></td>
+        <td><%= tabela.sugestao1 %></td>
+        <td><%= tabela.sugestao2 %></td>
+        <td><%= tabela.sugestao3 %></td>
+        <td><%= tabela.sugestao4 %></td>
+        <td><%= tabela.sugestao5 %></td>
+        <td><%= tabela.comentario %></td>
+        <td><%=l tabela.created_at %></td>
+        <td>
+          <%= link_to t('.show', :default => t("helpers.links.show")),
+                      tabela_path(tabela), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_tabela_path(tabela), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      tabela_path(tabela),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_tabela_path,
+            :class => 'btn btn-primary' %>

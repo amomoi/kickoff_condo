@@ -1,0 +1,2 @@
+json.extract! tabela, :id, :nome_principal, :unidade, :celular, :email, :cidade, :profissao, :zap, :nome1, :profissao1, :parentesco, :nome2, :profissao2, :parentesco2, :nome3, :profissao3, :parentesco3, :nome4, :profissao4, :parentesco4, :nome5, :profissao5, :parentesco5, :ano_compra, :frequencia, :locacao, :sugestao1, :sugestao2, :sugestao3, :sugestao4, :sugestao5, :comentario, :created_at, :updated_at
+json.url tabela_url(tabela, format: :json)
