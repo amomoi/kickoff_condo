@@ -1,5 +1,6 @@
 class TabelasController < ApplicationController
   before_action :set_tabela, only: %i[ show edit update destroy ]
+  skip_before_action :verify_authenticity_token
 
   # GET /tabelas or /tabelas.json
   def index
