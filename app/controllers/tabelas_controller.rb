@@ -3,6 +3,7 @@ class TabelasController < ApplicationController
 
   # GET /tabelas or /tabelas.json
   def index
+    releaseCrossDomain
     @tabelas = Tabela.all
   end
 
@@ -21,6 +22,7 @@ class TabelasController < ApplicationController
 
   # POST /tabelas or /tabelas.json
   def create
+    releaseCrossDomain
     @tabela = Tabela.new(tabela_params)
 
     respond_to do |format|
@@ -67,4 +69,12 @@ class TabelasController < ApplicationController
     def tabela_params
       params.require(:tabela).permit(:nome_principal, :unidade, :celular, :email, :cidade, :profissao, :zap, :nome1, :profissao1, :parentesco, :nome2, :profissao2, :parentesco2, :nome3, :profissao3, :parentesco3, :nome4, :profissao4, :parentesco4, :nome5, :profissao5, :parentesco5, :ano_compra, :frequencia, :locacao, :sugestao1, :sugestao2, :sugestao3, :sugestao4, :sugestao5, :comentario)
     end
+
+    def releaseCrossDomain
+      headers['Access-Control-Allow-Origin'] = '*'
+      headers['Access-Control-Allow-Methods'] = '*'
+      headers['Access-Control-Request-Method'] = '*'
+      headers['Access-Control-Allow-Headers'] = '*'
+    end
+
 end
